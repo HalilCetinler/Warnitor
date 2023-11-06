@@ -1,0 +1,170 @@
+﻿@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Register</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- ================== BEGIN core-css ================== -->
+    <link href="~/assets/css/app.min.css" rel="stylesheet" />
+    <link href="~/assets/css/vendor.min.css" rel="stylesheet" />
+
+	<!-- ================== END core-css ================== -->
+
+</head>
+<body class='pace-top'>
+	<!-- BEGIN #app -->
+	<div id="app" class="app app-full-height app-without-header">
+		<!-- BEGIN register -->
+		<div class="register">
+			<!-- BEGIN register-content -->
+			<div class="register-content">
+				<form action="index.html" method="POST" name="register_form">
+					<h1 class="text-center">Sign Up</h1>
+					
+					<div class="mb-3">
+						<label class="form-label">Email Address <span class="text-danger">*</span></label>
+						<input type="text" class="form-control form-control-lg" placeholder="Enter mail" value="">
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Password <span class="text-danger">*</span></label>
+						<input type="password" class="form-control form-control-lg" value="">
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+						<input type="password" class="form-control form-control-lg" value="">
+						
+					</div>
+					
+					<div class="mb-3">
+						<button type="submit" class="btn btn-theme btn-lg fw-semibold d-block w-100">Sign Up</button>
+					</div>
+					<style>
+						button:disabled {
+							background-color: red;
+						}
+					</style>
+				</form>
+			</div>
+			<!-- END register-content -->
+		
+	<!-- END #app -->
+	<!-- ================== BEGIN core-js ================== -->
+			<script src="/assets/plugins/jquery/dist/jquery.min.js"></script>
+			<script src="/assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+			
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					const passwordInput = document.querySelector('input[type="password"]');
+					const confirmPasswordInput = document.querySelectorAll('input[type="password"]')[1];
+					const signUpButton = document.querySelector('button[type="submit"]');
+
+					confirmPasswordInput.addEventListener("input", function () {
+						const password = passwordInput.value;
+						const confirmPassword = confirmPasswordInput.value;
+
+						if (password !== confirmPassword) {
+							signUpButton.disabled = true;
+						} else {
+							signUpButton.disabled = false;
+						}
+					});
+
+					passwordInput.addEventListener("input", function () {
+						const password = passwordInput.value;
+						const confirmPassword = confirmPasswordInput.value;
+
+						if (password !== confirmPassword) {
+							signUpButton.disabled = true;
+						} else {
+							signUpButton.disabled = false;
+						}
+					});
+				});
+			</script>
+			<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const passwordInput = document.querySelector('input[type="password"]');
+    const confirmPasswordInput = document.querySelectorAll('input[type="password"]')[1];
+    const signUpButton = document.querySelector('button[type="submit"]');
+
+    confirmPasswordInput.addEventListener("input", function() {
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (password !== confirmPassword) {
+            signUpButton.disabled = true;
+            signUpButton.style.backgroundColor = "red";
+        } else {
+            signUpButton.disabled = false;
+            signUpButton.style.backgroundColor = ""; // Varsayılan rengi geri alır
+        }
+    });
+
+    passwordInput.addEventListener("input", function() {
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (password !== confirmPassword) {
+            signUpButton.disabled = true;
+            signUpButton.style.backgroundColor = "red";
+        } else {
+            signUpButton.disabled = false;
+            signUpButton.style.backgroundColor = ""; // Varsayılan rengi geri alır
+        }
+    });
+});
+</script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					const passwordInput = document.querySelector('input[type="password"]');
+					const confirmPasswordInput = document.querySelectorAll('input[type="password"]')[1];
+					const signUpButton = document.querySelector('button[type="submit"]');
+
+					confirmPasswordInput.addEventListener("input", function () {
+						const password = passwordInput.value;
+						const confirmPassword = confirmPasswordInput.value;
+
+						if (password !== confirmPassword) {
+							signUpButton.disabled = true;
+							signUpButton.style.backgroundColor = "red";
+							signUpButton.textContent = "Passwords do not match";
+						} else {
+							signUpButton.disabled = false;
+							signUpButton.style.backgroundColor = ""; // Varsayılan rengi geri alır
+							signUpButton.textContent = "Sign Up"; // Orijinal yazıyı geri yükler
+						}
+					});
+
+					passwordInput.addEventListener("input", function () {
+						const password = passwordInput.value;
+						const confirmPassword = confirmPasswordInput.value;
+
+						if (password !== confirmPassword) {
+							signUpButton.disabled = true;
+							signUpButton.style.backgroundColor = "red";
+							signUpButton.textContent = "passwords do not match";
+						} else {
+							signUpButton.disabled = false;
+							signUpButton.style.backgroundColor = ""; // Varsayılan rengi geri alır
+							signUpButton.textContent = "Sign Up"; // Orijinal yazıyı geri yükler
+						}
+					});
+				});
+			</script>
+
+
+
+
+			
+	<!-- ================== END core-js ================== -->
+
+
+</body>
+</html>
